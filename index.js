@@ -15,13 +15,7 @@ app.use("/",HeroRoute)
 app.get("/", (req, res) => {
     res.json({
         message: "SuperHero API is running 🚀",
-        register: "/register",
-        login: "/login",
-        addHero: "/add/heros",
-        getHeroes: "/get/heros",
-        getAllHeroes: "/get/allheros",
-        updateHero: "/update/heros/:heroname",
-        deleteHero: "/delete/heros/:heroname"
+        
     });
 });
 connectDb()
