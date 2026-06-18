@@ -13,10 +13,7 @@ app.use("/",HeroRoute)
 
 
 app.get("/", (req, res) => {
-    res.json({
-        message: "SuperHero API is running 🚀",
-        
-    });
+    res.send("SuperHero API is Running ");
 });
 connectDb()
 app.listen(3002,(req,res)=>{
