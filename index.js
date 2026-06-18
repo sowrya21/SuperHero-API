@@ -12,9 +12,20 @@ app.use("/",userRoute)
 app.use("/",HeroRoute)
 
 
-app.get("/",(req,res)=>{
-    res.send("server.started")
+
+    app.get("/", (req,res)=>{
+    res.json({
+        message: "SuperHero API is running 🚀",
+        status: "success",
+        endpoints: {
+            register: "/register",
+            login: "/login",
+            addHero: "/add/heros",
+            getHeroes: "/get/heros"
+        }
+    })
 })
+
 connectDb()
 app.listen(3002,(req,res)=>{
     console.log("server started");
